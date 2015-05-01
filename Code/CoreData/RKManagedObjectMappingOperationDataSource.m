@@ -260,7 +260,7 @@ extern NSString * const RKObjectMappingNestingAttributeKeyName;
                                                     inManagedObjectContext:self.managedObjectContext];
         if (entityMapping.identificationPredicate) objects = [objects filteredSetUsingPredicate:entityMapping.identificationPredicate];
         if (entityMapping.identificationPredicateBlock) {
-            NSPredicate *predicate = entityMapping.identificationPredicateBlock(representation);
+            NSPredicate *predicate = entityMapping.identificationPredicateBlock(representation, self.managedObjectContext);
             if (predicate) objects = [objects filteredSetUsingPredicate:predicate];
         }
         if ([objects count] > 0) {

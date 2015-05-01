@@ -119,7 +119,7 @@
  
  @return The identification predicate block.
  */
-@property (nonatomic, copy) NSPredicate *(^identificationPredicateBlock)(NSDictionary *representation);
+@property (nonatomic, copy) NSPredicate *(^identificationPredicateBlock)(NSDictionary *representation, NSManagedObjectContext manageObjectContext);
 
 
 /**
